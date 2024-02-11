@@ -168,20 +168,12 @@ starlight-toc nav {
   }
 }
 
+/* Mobile TOC */
+summary#starlight__on-this-page--mobile {
+  background-color: var(--sl-color-bg);
+  border-color: var(--sl-color-hairline-light);
 
-/* To be decided */
-
-/* [data-theme='light'] body {
-  --sl-color-bg: var(--sl-color-black);
+  .display-current {
+    display: none;
+  }
 }
-
-body {
-  --sl-color-bg: var(--sl-color-gray-6);
-}
-.sidebar-pane {
-  background-color: var(--sl-color-black);
-}
-
-[data-theme='light'] .sidebar-pane {
-  background-color: var(--sl-color-gray-7);
-} */
