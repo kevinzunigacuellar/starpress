@@ -1,0 +1,16 @@
+{
+  "name": "starpress-root",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "format": "prettier -w --cache --plugin prettier-plugin-astro ."
+  },
+  "license": "MIT",
+  "keywords": [],
+  "author": "Kevin Zuniga Cuellar",
+  "dependencies": {
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0"
+  }
+}

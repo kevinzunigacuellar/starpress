@@ -1,0 +1,31 @@
+{
+  "name": "starpress",
+  "version": "0.0.1",
+  "description": "Starlight plugin to make your Starlight look like VitePress",
+  "author": "Kevin Zuniga Cuellar",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevinzunigacuellar/starpress",
+    "directory": "packages/starpress"
+  },
+  "bugs": "https://github.com/kevinzunigacuellar/starpress/issues",
+  "homepage": "",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "index.ts",
+    "styles.css"
+  ],
+  "exports": {
+    ".": "./index.ts",
+    "./styles.css": "./styles.css"
+  },
+  "peerDependencies": {
+    "@astrojs/starlight": ">=0.14.0"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.0.16"
+  }
+}
