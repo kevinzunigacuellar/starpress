@@ -1,4 +1,4 @@
-/* import font */
+/* fonts */
 @import url("@fontsource-variable/inter");
 
 :root {
@@ -8,7 +8,7 @@
   --sl-text-h4: 1rem;
   --sl-sidebar-width: 17rem;
   --sl-sidebar-pad-x: 2rem;
-  --sl-font: 'Inter Variable', sans-serif;
+  --sl-font: "Inter Variable", sans-serif;
   --sl-nav-gap: 0.5rem;
 }
 
@@ -42,9 +42,45 @@
 }
 
 /* Asides */
+[data-theme="light"] .starlight-aside--note code {
+  background-color: hsl(var(--sl-hue-blue), 88%, 85%);
+}
+
+[data-theme="light"] .starlight-aside--tip code {
+  background-color: hsl(var(--sl-hue-purple), 88%, 85%);
+}
+
+[data-theme="light"] .starlight-aside--danger code {
+  background-color: hsl(var(--sl-hue-red), 88%, 85%);
+}
+
+[data-theme="light"] .starlight-aside--caution code {
+  background-color: hsl(var(--sl-hue-orange), 88%, 80%);
+}
+
+.starlight-aside--note code {
+  background-color: hsl(var(--sl-hue-blue), 50%, 30%);
+}
+
+.starlight-aside--tip code {
+  background-color: hsl(var(--sl-hue-purple), 50%, 30%);
+}
+
+.starlight-aside--danger code {
+  background-color: hsl(var(--sl-hue-red), 50%, 30%);
+}
+
+.starlight-aside--caution code {
+  background-color: hsl(var(--sl-hue-orange), 50%, 30%);
+}
+
 .starlight-aside {
   border-inline-start: none;
   border-radius: 0.375rem;
+}
+
+.starlight-aside code {
+  color: var(--sl-color-asides-text-accent);
 }
 
 /* Sidebar */
@@ -70,7 +106,7 @@
   line-height: 1.6;
 }
 
-[data-theme='light'] .sidebar-content li a {
+[data-theme="light"] .sidebar-content li a {
   color: var(--sl-color-gray-3);
 }
 
@@ -111,7 +147,7 @@
 /* Pagination */
 .pagination-links a {
   box-shadow: none;
-  border-radius: 0.375rem;
+  border-radius: 0.5rem;
   padding: 0.75rem 1rem;
   font-size: var(--sl-text-xs);
 }

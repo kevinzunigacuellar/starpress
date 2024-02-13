@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "format": "prettier -w --cache --plugin prettier-plugin-astro ."
+    "format": "prettier -w --cache --plugin prettier-plugin-astro .",
+    "dev": "pnpm --filter demo run dev"
   },
   "license": "MIT",
   "keywords": [],

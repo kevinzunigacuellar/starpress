@@ -1,11 +1,33 @@
 ---
-title: Example Guide
-description: A guide in my new Starlight docs site.
+title: Markdown Content
+description: This is a markdown content example.
 ---
 
-Guides lead a user through a specific task they want to accomplish, often with a sequence of steps.
-Writing a good guide requires thinking about what your users are trying to do.
+We are getting closer!
 
-## Further reading
+:::note
+This is a note. `code`, **emphasis** and [links](https://example.com) are supported.
+:::
 
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
+:::tip
+This is a tip. `code`, **emphasis** and [links](https://example.com) are supported.
+:::
+
+:::caution
+This is a caution. `code`, **emphasis** and [links](https://example.com) are supported.
+:::
+
+:::danger
+This is a danger. `code`, **emphasis** and [links](https://example.com) are supported.
+:::
+
+Code blocks
+
+```diff lang="js"
+  function thisIsJavaScript() {
+    // This entire block gets highlighted as JavaScript,
+    // and we can still add diff markers to it!
+-   console.log('Old code to be removed')
++   console.log('New and shiny code!')
+  }
+```
