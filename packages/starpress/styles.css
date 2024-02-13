@@ -34,7 +34,7 @@
 /* Markdown Typography */
 .sl-markdown-content code:not(:where(.not-content *)) {
   border-radius: 0.275rem;
-  padding: 0.275rem 0.325rem;
+  padding: 0.2rem 0.325rem;
 }
 
 .sl-markdown-content a:not(:where(.not-content *)) {
@@ -81,6 +81,15 @@
 
 .starlight-aside code {
   color: var(--sl-color-asides-text-accent);
+}
+
+.starlight-aside__title > svg {
+  display: none;
+}
+
+.starlight-aside__title {
+  font-size: var(--sl-text-sm);
+  text-transform: uppercase;
 }
 
 /* Sidebar */

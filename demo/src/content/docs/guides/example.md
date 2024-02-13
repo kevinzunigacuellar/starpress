@@ -3,7 +3,7 @@ title: Markdown Content
 description: This is a markdown content example.
 ---
 
-We are getting closer!
+## Asides
 
 :::note
 This is a note. `code`, **emphasis** and [links](https://example.com) are supported.
@@ -14,14 +14,14 @@ This is a tip. `code`, **emphasis** and [links](https://example.com) are support
 :::
 
 :::caution
-This is a caution. `code`, **emphasis** and [links](https://example.com) are supported.
+This is a caution. `code` , **emphasis** and [links](https://example.com) are supported.
 :::
 
 :::danger
 This is a danger. `code`, **emphasis** and [links](https://example.com) are supported.
 :::
 
-Code blocks
+## Code blocks
 
 ```diff lang="js"
   function thisIsJavaScript() {
