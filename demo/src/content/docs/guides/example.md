@@ -3,6 +3,12 @@ title: Markdown Content
 description: This is a markdown content example.
 ---
 
+`code`, **emphasis** and [links](https://example.com) are supported.
+
+## Title 2
+### Title 3
+#### Title 4
+
 ## Asides
 
 :::note
