@@ -1,6 +1,3 @@
-/* fonts */
-@import url("@fontsource-variable/inter");
-
 :root {
   --sl-text-h1: 2rem;
   --sl-text-h2: 1.5rem;
@@ -8,7 +5,6 @@
   --sl-text-h4: 1rem;
   --sl-sidebar-width: 17rem;
   --sl-sidebar-pad-x: 2rem;
-  --sl-font: "Inter Variable", sans-serif;
   --sl-nav-gap: 0.5rem;
 }
 
@@ -44,6 +40,34 @@
 
 .sl-markdown-content h1, .sl-markdown-content h2, .sl-markdown-content h3, .sl-markdown-content h4 {
   letter-spacing: -0.0125em;
+}
+
+.sl-markdown-content .expressive-code .frame pre,
+.expressive-code .frame.has-title:not(.is-terminal) .header {
+  --bg-ec-ov: var(--sl-color-gray-6);
+  --b-ec-ov: var(--sl-color-gray-5);
+  --code-background: var(--bg-ec-ov);
+  --ec-frm-edTabBarBg: var(--bg-ec-ov);
+  --ec-frm-edActTabBg: var(--bg-ec-ov);
+  --ec-frm-edActTabIndBtmCol: var(--sl-color-text-accent);
+  --ec-frm-edTabBarBrdBtmCol: var(--b-ec-ov);
+}
+
+[data-theme="light"] .sl-markdown-content .expressive-code .frame pre, 
+[data-theme="light"] .expressive-code .frame.has-title:not(.is-terminal) .header {
+  --bg-ec-ov: var(--sl-color-gray-7);
+  --b-ec-ov: var(--sl-color-gray-5);
+}
+
+.sl-markdown-content starlight-tabs .expressive-code .frame pre,
+starlight-tabs .expressive-code .frame.has-title:not(.is-terminal) .header {
+  --b-ec-ov: var(--sl-color-gray-4);
+}
+
+[data-theme="light"] .sl-markdown-content starlight-tabs .expressive-code .frame pre,
+[data-theme="light"] starlight-tabs .expressive-code .frame.has-title:not(.is-terminal) .header {
+  --bg-ec-ov: var(--sl-color-gray-6);
+  --b-ec-ov: var(--sl-color-gray-5);
 }
 
 /* Asides */
@@ -200,8 +224,8 @@ starlight-toc nav {
   margin-bottom: 0;
 }
 
-#starlight__on-this-page + ul > li > a {
-  padding-inline-start: 0;
+#starlight__on-this-page + ul li a {
+  --pad-inline: 0rem;
 }
 
 #starlight__on-this-page,
@@ -228,4 +252,41 @@ summary#starlight__on-this-page--mobile {
   .display-current {
     display: none;
   }
+}
+
+
+/* Tabs */
+.tab > a[role=tab] {
+  padding-block: 0.5rem;
+  border-width: 1px;
+  font-size: var(--sl-text-sm);
+}
+
+.tablist-wrapper [role=tablist] {
+  border-width: 1px;
+}
+
+.tablist-wrapper .tab {
+  margin-bottom: -1px;
+}
+
+[data-theme="light"] starlight-tabs {
+  background-color: var(--sl-color-gray-7);
+}
+
+starlight-tabs {
+  background-color: var(--sl-color-gray-6);
+}
+
+starlight-tabs {
+  border-radius: 0.5rem;
+}
+
+.tablist-wrapper~section[role="tabpanel"] {
+  margin: 0;
+  padding: 1.25rem;
+}
+
+.tablist-wrapper .tab [role=tab][aria-selected]{
+  font-weight: 500;
 }
