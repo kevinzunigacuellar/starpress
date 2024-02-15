@@ -24,8 +24,5 @@
   "peerDependencies": {
     "@astrojs/starlight": ">=0.14.0"
   },
-  "keywords": [],
-  "dependencies": {
-    "@fontsource-variable/inter": "^5.0.16"
-  }
+  "keywords": []
 }
