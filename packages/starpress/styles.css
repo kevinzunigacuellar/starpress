@@ -1,3 +1,4 @@
+/* Global Variables */
 :root {
   --sl-text-h1: 2rem;
   --sl-text-h2: 1.5rem;
@@ -38,12 +39,12 @@
   text-underline-offset: 0.125rem;
 }
 
-.sl-markdown-content h1, .sl-markdown-content h2, .sl-markdown-content h3, .sl-markdown-content h4 {
+.sl-markdown-content :is(h1, h2, h3, h4) {
   letter-spacing: -0.0125em;
 }
 
-.sl-markdown-content .expressive-code .frame pre,
-.expressive-code .frame.has-title:not(.is-terminal) .header {
+/* Expressive Code */
+.expressive-code .frame :is(pre, .header) {
   --bg-ec-ov: var(--sl-color-gray-6);
   --b-ec-ov: var(--sl-color-gray-5);
   --code-background: var(--bg-ec-ov);
@@ -51,23 +52,55 @@
   --ec-frm-edActTabBg: var(--bg-ec-ov);
   --ec-frm-edActTabIndBtmCol: var(--sl-color-text-accent);
   --ec-frm-edTabBarBrdBtmCol: var(--b-ec-ov);
+  --ec-frm-trmTtbBg: var(--bg-ec-ov);
+  --ec-frm-trmTtbBrdBtmCol: var(--b-ec-ov);
 }
 
-[data-theme="light"] .sl-markdown-content .expressive-code .frame pre, 
-[data-theme="light"] .expressive-code .frame.has-title:not(.is-terminal) .header {
+[data-theme="light"] .expressive-code .frame :is(pre, .header) {
   --bg-ec-ov: var(--sl-color-gray-7);
   --b-ec-ov: var(--sl-color-gray-5);
 }
 
-.sl-markdown-content starlight-tabs .expressive-code .frame pre,
-starlight-tabs .expressive-code .frame.has-title:not(.is-terminal) .header {
+starlight-tabs .expressive-code .frame :is(pre, .header) {
   --b-ec-ov: var(--sl-color-gray-4);
+  --bg-ec-ov: var(--sl-color-gray-5);
 }
 
-[data-theme="light"] .sl-markdown-content starlight-tabs .expressive-code .frame pre,
-[data-theme="light"] starlight-tabs .expressive-code .frame.has-title:not(.is-terminal) .header {
+[data-theme="light"] starlight-tabs .expressive-code .frame :is(pre, .header) {
   --bg-ec-ov: var(--sl-color-gray-6);
   --b-ec-ov: var(--sl-color-gray-5);
+}
+
+/* Tabs + Expressive Code */
+.tablist-wrapper
+  ~ section[role="tabpanel"]
+  > .expressive-code:only-child
+  > .frame
+  > .header {
+  display: none;
+}
+
+.tablist-wrapper
+  ~ section[role="tabpanel"]
+  > .expressive-code:only-child
+  > .frame {
+  --button-spacing: 0.4rem;
+}
+
+.tablist-wrapper ~ section[role="tabpanel"]:has(.expressive-code:only-child) {
+  padding: 0;
+}
+
+starlight-tabs .expressive-code:only-child .frame :is(pre, .header) {
+  --bg-ec-ov: var(--sl-color-gray-6);
+}
+
+[data-theme="light"]
+  starlight-tabs
+  .expressive-code:only-child
+  .frame
+  :is(pre, .header) {
+  --bg-ec-ov: var(--sl-color-gray-7);
 }
 
 /* Asides */
@@ -133,8 +166,7 @@ starlight-tabs .expressive-code .frame.has-title:not(.is-terminal) .header {
   padding-bottom: 1.5rem;
 }
 
-.sidebar-content ul,
-.sidebar-content li {
+.sidebar-content :is(ul, li) {
   --sl-sidebar-item-padding-inline: 0;
   border-inline-start: none;
 }
@@ -162,8 +194,7 @@ starlight-tabs .expressive-code .frame.has-title:not(.is-terminal) .header {
   margin-top: 0;
 }
 
-.sidebar-content ul.top-level summary,
-.sidebar-content ul.top-level a {
+.sidebar-content ul.top-level :is(summary, a) {
   padding-block: 0.3rem;
 }
 
@@ -254,15 +285,18 @@ summary#starlight__on-this-page--mobile {
   }
 }
 
-
 /* Tabs */
-.tab > a[role=tab] {
+starlight-tabs {
+  background-color: var(--sl-color-gray-6);
+  border-radius: 0.5rem;
+}
+.tablist-wrapper .tab > a[role="tab"] {
   padding-block: 0.5rem;
   border-width: 1px;
   font-size: var(--sl-text-sm);
 }
 
-.tablist-wrapper [role=tablist] {
+.tablist-wrapper [role="tablist"] {
   border-width: 1px;
 }
 
@@ -274,19 +308,11 @@ summary#starlight__on-this-page--mobile {
   background-color: var(--sl-color-gray-7);
 }
 
-starlight-tabs {
-  background-color: var(--sl-color-gray-6);
-}
-
-starlight-tabs {
-  border-radius: 0.5rem;
-}
-
-.tablist-wrapper~section[role="tabpanel"] {
+.tablist-wrapper ~ section[role="tabpanel"] {
   margin: 0;
   padding: 1.25rem;
 }
 
-.tablist-wrapper .tab [role=tab][aria-selected]{
+.tablist-wrapper .tab [role="tab"][aria-selected] {
   font-weight: 500;
 }
