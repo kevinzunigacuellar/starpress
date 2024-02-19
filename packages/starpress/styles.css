@@ -121,35 +121,35 @@ starlight-tabs .expressive-code:only-child .frame :is(pre, .header) {
   text-transform: uppercase;
 }
 
-[data-theme="light"] .starlight-aside--note :not(pre) code {
+[data-theme="light"] .starlight-aside--note code:not(pre code) {
   background-color: hsl(var(--sl-hue-blue), 88%, 85%);
 }
 
-[data-theme="light"] .starlight-aside--tip :not(pre) code {
+[data-theme="light"] .starlight-aside--tip code:not(pre code) {
   background-color: hsl(var(--sl-hue-purple), 88%, 85%);
 }
 
-[data-theme="light"] .starlight-aside--danger :not(pre) code {
+[data-theme="light"] .starlight-aside--danger code:not(pre code) {
   background-color: hsl(var(--sl-hue-red), 88%, 85%);
 }
 
-[data-theme="light"] .starlight-aside--caution :not(pre) code {
+[data-theme="light"] .starlight-aside--caution code:not(pre code) {
   background-color: hsl(var(--sl-hue-orange), 88%, 80%);
 }
 
-.starlight-aside--note :not(pre) code {
+.starlight-aside--note :is(code):not(pre) {
   background-color: hsl(var(--sl-hue-blue), 50%, 30%);
 }
 
-.starlight-aside--tip :not(pre) code {
+.starlight-aside--tip code:not(pre code) {
   background-color: hsl(var(--sl-hue-purple), 50%, 30%);
 }
 
-.starlight-aside--danger :not(pre) code {
+.starlight-aside--danger code:not(pre code) {
   background-color: hsl(var(--sl-hue-red), 50%, 30%);
 }
 
-.starlight-aside--caution :not(pre) code {
+.starlight-aside--caution code:not(pre code) {
   background-color: hsl(var(--sl-hue-orange), 50%, 30%);
 }
 
