@@ -106,16 +106,16 @@ starlight-tabs .expressive-code:only-child .frame :is(pre, .header) {
   border-radius: 0.375rem;
 }
 
-.starlight-aside code {
-  color: var(--sl-color-asides-text-accent);
-}
-
 .starlight-aside__title > svg {
   display: none;
 }
 
 .starlight-aside__title {
   text-transform: uppercase;
+}
+
+.starlight-aside code {
+  color: var(--sl-color-asides-text-accent);
 }
 
 [data-theme="light"] .starlight-aside--note code:not(pre code) {
