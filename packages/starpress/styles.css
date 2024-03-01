@@ -347,3 +347,13 @@ starlight-tabs {
     margin-right: 1rem;
   }
 }
+
+/* File Tree */
+.sl-markdown-content starlight-file-tree {
+  border: none;
+  border-radius: 0.5rem;
+}
+
+[data-theme="light"] starlight-file-tree {
+  background-color: var(--sl-color-gray-7);
+}

@@ -8,7 +8,7 @@ export default defineConfig({
     starlight({
       title: "🌟 StarPress",
       social: {
-        github: "https://github.com/withastro/starlight",
+        github: "https://github.com/kevinzunigacuellar/starpress",
       },
       sidebar: [
         {
@@ -16,6 +16,7 @@ export default defineConfig({
           items: [
             // Each item here is one entry in the navigation menu.
             { label: "Getting Started", link: "/guides/getting-started/" },
+            { label: "Routing", link: "/guides/routing/" },
           ],
         },
         {
