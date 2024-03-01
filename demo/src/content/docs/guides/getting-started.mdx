@@ -3,7 +3,7 @@ title: Getting Started
 description: This is a markdown content example.
 ---
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Tabs, TabItem, FileTree } from '@astrojs/starlight/components';
 
 ## Try It Online
 
@@ -112,16 +112,18 @@ If you are building a standalone VitePress site, you can scaffold the site in yo
 
 Assuming you chose to scaffold the VitePress project in `./docs`, the generated file structure should look like this:
 
-```
-.
-├─ docs
-│  ├─ .vitepress
-│  │  └─ config.js
-│  ├─ api-examples.md
-│  ├─ markdown-examples.md
-│  └─ index.md
-└─ package.json
-```
+<FileTree>
+
+- docs/
+  - .vitepress/
+    - config.js
+  - api-examples.md
+  - markdown-examples.md
+  - index.md
+  - …
+- package.json
+
+</FileTree>
 
 The `docs` directory is considered the **project root** of the VitePress site. The `.vitepress` directory is a reserved location for VitePress' config file, dev server cache, build output, and optional theme customization code.
 
@@ -160,15 +162,13 @@ VitePress also provides the ability to generate clean URLs, rewrite paths, and d
 
 The tool should have also injected the following npm scripts to your `package.json` if you allowed it to do so during the setup process:
 
-```json
+```json title="package.json"
 {
-  ...
   "scripts": {
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
-  ...
 }
 ```
 
